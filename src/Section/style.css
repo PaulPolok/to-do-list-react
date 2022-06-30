@@ -1,0 +1,78 @@
+.section {
+    margin-top: 10px;
+    background: white;
+    border: #ddd;
+    border-radius: 1px;
+    padding: 0px 20px;
+    box-shadow: 1px 1px 10px 1px rgb(201, 201, 201);
+
+}
+
+.section__header {
+    border-bottom: 3px solid rgb(238, 238, 238);
+    padding: 10px 0px;
+    display: flex;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+
+
+}
+.section__buttonHeader{
+    border-bottom: 3px solid rgb(238, 238, 238);
+    padding: 10px 0px;
+    font-weight: bold;
+    font-size: 1.5em;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+    justify-content: space-between ;
+    align-items: center;
+}
+
+@media (max-width:767px){
+.section__buttonHeader{
+grid-template-columns: 1fr;
+}
+}
+.section__headerButtons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+ 
+
+}
+.section__headerButton {
+    
+    color: teal;
+    background-color: white;
+    border-style: none;
+    font-size: 18px;
+    padding: 0px 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.section__headerButton:disabled {
+    color: #bbb;
+}
+
+.section__headerButton:disabled:hover {
+    color: #bbb;
+}
+
+.section__headerButton:disabled:active {
+    color: #bbb;
+}
+
+
+.section__headerButton:hover {
+    color: rgb(0, 169, 169)
+}
+
+.section__headerButton:active {
+    color: rgb(0, 189, 189)
+}
