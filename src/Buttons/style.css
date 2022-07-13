@@ -1,0 +1,38 @@
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+ 
+
+}
+.buttons__button {
+    
+    color: teal;
+    background-color: white;
+    border-style: none;
+    font-size: 18px;
+    padding: 0px 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.buttons__button:disabled {
+    color: #bbb;
+}
+
+.buttons__button:disabled:hover {
+    color: #bbb;
+}
+
+.buttons__button:disabled:active {
+    color: #bbb;
+}
+
+
+.buttons__button:hover {
+    color: rgb(0, 169, 169)
+}
+
+.buttons__button:active {
+    color: rgb(0, 189, 189)
+}
