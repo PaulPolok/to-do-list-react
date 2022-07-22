@@ -17,8 +17,8 @@ function App() {
   return (
     <div>
       <Container>
-        <Header 
-        title='Lista Zadań'
+        <Header
+          title='Lista Zadań'
         />
 
         <Section
@@ -28,9 +28,21 @@ function App() {
 
         <Section
           title='Lista zadań'
-          body={<Tasks tasks={tasks} hideDoneTask={hideDoneTask} />}
-          extraHeaderContent={<Buttons tasks={tasks} hideDoneTask={hideDoneTask} />}
+          body={
+            <Tasks
+              tasks={tasks}
+              hideDoneTask={hideDoneTask}
+            />
+          }
+
+          extraHeaderContent={
+            <Buttons
+              tasks={tasks}
+              hideDoneTask={hideDoneTask}
+            />
+          }
         />
+
       </Container>
     </div>
   );

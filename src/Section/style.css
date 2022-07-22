@@ -43,7 +43,13 @@
 }
 
 @media (max-width:767px){
-.section__buttonHeader{
+.section__header{
 grid-template-columns: 1fr;
+padding-bottom: 10px;
+grid-gap:10px;
 }
+.section__title{
+    text-align: center;
+}
+
 }

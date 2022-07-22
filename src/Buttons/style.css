@@ -36,3 +36,10 @@
 .buttons__button:active {
     color: rgb(0, 189, 189)
 }
+
+@media (max-width:767px){
+    .buttons__button{
+        margin-top: 5px;
+    }
+    
+    }
