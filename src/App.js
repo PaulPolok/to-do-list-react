@@ -1,8 +1,8 @@
 
 import Form from './Form';
 import Tasks from './Tasks';
-import Button from './Buttons';
-import "./Section/style.css";
+import Buttons from './Buttons';
+import Section from './Section';
 
 
 
@@ -21,18 +21,16 @@ function App() {
           <h1>Lista zadań</h1>
         </header>
 
-        <section className="section">
-          <h2 className="section__header">Dodaj nowe zadanie</h2>
-          <Form />
-        </section>
+        <Section
+          title="Dodaj nowe zadanie"
+          body={<Form />}
+        />
 
-        <section className="section">
-          <div className="section__buttonHeader">Lista zadań </div>
-          <Button tasks={tasks} hideDoneTask={hideDoneTask} />
-
-          <Tasks tasks={tasks} hideDoneTask={hideDoneTask} />
-
-        </section>
+        <Section
+          title="Lista zadań"
+          body={<Tasks tasks={tasks} hideDoneTask={hideDoneTask} />}
+          extraHeaderContent={<Buttons tasks={tasks} hideDoneTask={hideDoneTask} />}
+        />
       </main>
     </div>
   );
