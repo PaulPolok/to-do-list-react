@@ -1,0 +1,19 @@
+.container {
+    max-width: 800px;
+    padding: 20px;
+    margin: 0 auto;
+    
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: rgb(238, 238, 238);
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
