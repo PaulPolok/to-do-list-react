@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 import Container from './Container';
 import Form from './Form';
 import Tasks from './Tasks';
@@ -11,9 +12,14 @@ const tasks = [
   { id: 2, content: 'Zrobić stronę', done: true }
 ];
 
-const hideDone = false;
-
 function App() {
+
+  const [hideDone, setHideDone] = useState(false);
+
+  const toggleHideDone = () =>{
+    setHideDone(hideDone=> !hideDone);
+  };
+
   return (
     <div>
       <Container>
@@ -39,6 +45,7 @@ function App() {
             <Buttons
               tasks={tasks}
               hideDone={hideDone}
+              toggleHideDone={toggleHideDone}
             />
           }
         />
