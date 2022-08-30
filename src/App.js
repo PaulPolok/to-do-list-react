@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Container from './Container';
 import Form from './Form';
 import Tasks from './Tasks';
@@ -7,18 +7,23 @@ import Section from './Section';
 import Header from './Header';
 
 
-const tasks = [
-  { id: 1, content: 'Zjeść kebsa', done: false },
-  { id: 2, content: 'Zrobić stronę', done: true }
-];
-
 function App() {
 
   const [hideDone, setHideDone] = useState(false);
+  const [tasks, setTasks] = useState(
+    [
+      { id: 1, content: 'Zjeść kebsa', done: false },
+      { id: 2, content: 'Zrobić stronę', done: true }
+    ]
+  );
 
-  const toggleHideDone = () =>{
-    setHideDone(hideDone=> !hideDone);
+  const toggleHideDone = () => {
+    setHideDone(hideDone => !hideDone);
   };
+
+  const removeTask = (id) => {
+    setTasks(tasks=> tasks.filter(task => task.id !== id))
+  }
 
   return (
     <div>
@@ -38,6 +43,7 @@ function App() {
             <Tasks
               tasks={tasks}
               hideDone={hideDone}
+              removeTask={removeTask}
             />
           }
 
