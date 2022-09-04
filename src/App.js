@@ -11,12 +11,7 @@ function App() {
 
   const [hideDone, setHideDone] = useState(false);
 
-  const [tasks, setTasks] = useState(
-    [
-      { id: 1, content: 'Zjeść kebsa', done: false },
-      { id: 2, content: 'Zrobić stronę', done: true }
-    ]
-  );
+  const [tasks, setTasks] = useState([]);
 
 
 
